@@ -22,11 +22,11 @@ public class Carrello {
 		    final String NAME_PHRASE = "Nome del prodotto: \n";
 		    final String PRICE_PHRASE = "Prezzo del prodotto: \n";
 		    final String VAT_PHRASE = "Iva: \n";
-		    
+
 //		    Vars
 			boolean fidelity = false;
 			int discount = 0;
-			
+
 //			Fidelity Question
 		    System.out.println("Hai la tessera fedeltà?");
 		    String fidelityInput = in.nextLine();
@@ -53,7 +53,7 @@ public class Carrello {
 		            in.nextLine(); // Pulisci il buffer
 
 		            if (selectedProduct == 1) {
-		            	
+
 //		            	Vars
 		        		String imei = "";
 		        		int ram = 0;
@@ -194,6 +194,11 @@ public class Carrello {
 		                }
 		            } else {
 		                newProduct = false;
+//		                Print array
+		                System.out.println(Arrays.asList(carrello));
+		                
+//		                Print Cart
+		                System.out.println("Il prezzo totale è: " + sumCart);
 		            }
 		        }
 		    }
