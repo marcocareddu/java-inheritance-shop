@@ -19,7 +19,7 @@ public class Prodotto {
 		this.iva = iva;
 		setId();
 	}
-	
+
 //	Name
 	public void setName(String nome) {
 		this.nome = nome;
@@ -85,8 +85,16 @@ public class Prodotto {
 	public float getGrossPrice() {
 		return prezzo + getIvaAmount();
 	}
-
-//	Full Print
+	public double getDiscountedPrice(boolean isDiscounted, int discount) {
+        if(isDiscounted) {
+        	double discountAmount = (getGrossPrice() * discount) /100;
+        	return (getGrossPrice() - discountAmount) ;
+        } else {
+        	return getGrossPrice();
+        }
+	}
+	
+	//	Full Print
 	@Override
 	public String toString() {
 		return "-----------------------------------------" + "\n"
